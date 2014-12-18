@@ -7,6 +7,8 @@ module RSqoot
     def self.included(base)
       ['deals',
        'deal',
+       'coupons',
+       'coupon',
        'categories',
        'providers',
        'merchant',
@@ -45,6 +47,7 @@ module RSqoot
       # All records should return as RSqoot::Sqoot* object
       #
       ['SqootDeal',
+       'SqootCoupon',
        'SqootCategory',
        'SqootCommission',
        'SqootMerchant',

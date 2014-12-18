@@ -6,6 +6,7 @@ require 'rsqoot/provider'
 require 'rsqoot/commission'
 require 'rsqoot/click'
 require 'rsqoot/deal'
+require 'rsqoot/coupon'
 require 'rsqoot/request'
 require 'rsqoot/logger'
 
@@ -17,6 +18,7 @@ module RSqoot
     include Click
     include Commission
     include Deal
+    include Coupon
     include Merchant
     include Provider
     include Request

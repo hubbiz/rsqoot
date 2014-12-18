@@ -4,11 +4,12 @@ require 'json'
 module RSqoot
   module Request
 
-    # Get method, use by all other API qeury methods, fetch records
+    # Get method, use by all other API query methods, fetch records
     # from the Sqoot API V2 url, and provide wrapper functionality
     #
     def get(path, opts = {}, wrapper = ::Hashie::Mash)
       uri, headers = url_generator(path, opts)
+
       begin
         json = JSON.parse uri.open(headers).read
         result = wrapper.new json
@@ -52,7 +53,7 @@ module RSqoot
     # Endpoints that both public or private key will work
     #
     def public_endpoints
-      %w(categories deals merchants providers)
+      %w(categories deals coupons merchants providers)
     end
 
     # Decide which api key should be used: private, public
